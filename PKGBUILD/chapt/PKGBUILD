@@ -1,0 +1,15 @@
+pkgname=chapt
+pkgver=2.8
+pkgrel=1
+pkgdesc="A frontend for pacman, yay and other packegemanager(in a shell like way)."
+arch=('any')
+license=('Apache')
+depends=(bash)
+makedepends=(git)
+optdepends=('pacman: install repo packages'
+	    'yay: install AUR packeges')
+source=("git+https://github.com/littlelion308/CHAPT.git")
+package() {
+	sudo install CHAPT/CHAPT.sh /bin/chapt
+}
+md5sums=('SKIP')

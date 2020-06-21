@@ -1,0 +1,13 @@
+pkgname=adduser
+pkgver=1
+pkgrel=2
+pkgdesc="add a user (Orphand)"
+arch=('any')
+license=('Apache')
+depends=(bash)
+makedepends=(git)
+source=("git+https://github.com/littlelion308/crap_and_old_config_files.git")
+package() {
+	sudo install crap_and_old_config_files/adduser.sh /bin/adduser
+}
+md5sums=('SKIP')
